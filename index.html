@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Ishita Kale | Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+</head>
+<body>
+  <!-- NAVBAR -->
+  <nav class="navbar">
+    <div class="logo">ISHITA</div>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#about">About</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#contact">Contact</a></li>
+      <li><a href="https://azure-gae-23.tiiny.site" download>Resume</a></li>
+    </ul>
+    <div class="burger" onclick="toggleMenu()">☰</div>
+  </nav>
+
+  <!-- HERO SECTION -->
+  <header class="hero-section">
+    <h1 class="typewriter"> Hi, I'm Ishita 👋</h1>
+    <p class="fade-in delay-1">ASPIRING FULL-STACK DEVELOPER & CREATIVE THINKER</p>
+    <a href="#projects" class="btn fade-in delay-2">View My Work</a>
+  </header>
+
+  <!-- ABOUT -->
+  <section id="about">
+    <h2 data-aos="fade-up">About Me</h2>
+    <p data-aos="fade-up" data-aos-delay="100">I am a passionate and driven Computer engineer with a strong foundation in both technical and creative domains. 
+        with hands-on experience across e-commerce product management and front-end development, I bring analytical thinking and design sensibility to every project i work on.
+I continuously seek opportunities that challenges me and push me to grow. 
+My internships have enabled me to work in diverse environment, sharpening my skills in problem solving, collaboration, and innovation.
+I take pride in being an active contributor to causes that matter--volunteering for social welfare initiatives and participating in cultural leadership roles on campus.
+Currently, I'm expanding my skill set in full-stack development, building applications using HTML, CSS, JavaScript, and modern frameworks.
+I'm also exploring Generative AI to understand how cutting-edge models can be used in creative problem-solving and product innovation.
+What drives me is the intersection of technology, data, and human centered design. Whether it's analyzing user behavior, building systems or designing thoughtful digital experiences, i strive to create solutions that matter. 
+Core skills: HTML | CSS | JavaScript(Node.js) | Responsive Design | Python(Django) | Java | MySQL | MS Excel | Canva.
+Currently Learning: Full-Stack Development | Generative AI</p>
+  </section>
+
+  <!-- PROJECTS -->
+   <section id="projects">
+  <h2 data-aos="fade-up">Projects</h2>
+
+  <a href="https://github.com/ishitakale802/Simple-Weather-App.git" target="_blank" class="project-card" data-aos="zoom-in">
+    <div class="card-inner">
+      <div class="card-front">
+        <h3>🌐 Weather App</h3>
+      </div>
+      <div class="card-back">
+        <p>Check live weather using city name with styled UI.</p>
+      </div>
+    </div>
+  </a>
+
+</section>
+
+  <section id="projects">
+    <h2 data-aos="fade-up">Projects</h2>
+    <div class="project-card" data-aos="zoom-in">🌐 Weather App</div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact">
+    <h2 data-aos="fade-up">Contact</h2>
+    <form action="https://formspree.io/f/your-form-id" method="POST" data-aos="fade-up" data-aos-delay="100">
+      <input type="text" name="name" placeholder="Your Name" required><br/>
+      <input type="email" name="_replyto" placeholder="Your Email" required><br/>
+      <textarea name="message" placeholder="Your Message" required></textarea><br/>
+      <button type="submit" class="btn">Send Message</button>
+    </form>
+    <p style="margin-top: 20px;">Or reach me at <a href="mailto:ishitakale2802@gmail.com">ishitakale2802@gmail.com</a></p>
+  </section>
+
+  <!-- SCRIPTS -->
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
+  <script src="script.js"></script>
+</body>
+</html>

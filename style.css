@@ -1,0 +1,317 @@
+/* Google Font */
+body {
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(to bottom right, #1e003e, #3b0a73, #ff5f6d);
+  color: #f4f4f4;
+  text-align: center;
+  scroll-behavior: smooth;
+  line-height: 1.6;
+  position: relative; /* needed for ::before */
+  overflow-x: hidden; /* prevent horizontal scroll if sparkles go outside */
+}
+
+/* Glittery Galaxy Sparkle Effect - Enhanced with More Stars */
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  pointer-events: none;
+  background: transparent;
+  z-index: 0;
+  background-image:
+    radial-gradient(2px 2px at 5% 15%, #ffffff88, transparent 50%),
+    radial-gradient(1.5px 1.5px at 10% 50%, #ffffffbb, transparent 50%),
+    radial-gradient(2.5px 2.5px at 15% 80%, #ffffff99, transparent 50%),
+    radial-gradient(1.2px 1.2px at 25% 25%, #ffffffcc, transparent 50%),
+    radial-gradient(1.8px 1.8px at 35% 45%, #ffffffaa, transparent 50%),
+    radial-gradient(2px 2px at 40% 10%, #ffffffee, transparent 50%),
+    radial-gradient(1.3px 1.3px at 50% 70%, #ffffffbb, transparent 50%),
+    radial-gradient(2.2px 2.2px at 60% 35%, #ffffffdd, transparent 50%),
+    radial-gradient(1.6px 1.6px at 70% 20%, #ffffffcc, transparent 50%),
+    radial-gradient(2.5px 2.5px at 75% 55%, #ffffff99, transparent 50%),
+    radial-gradient(1.1px 1.1px at 85% 40%, #ffffffaa, transparent 50%),
+    radial-gradient(1.9px 1.9px at 90% 75%, #ffffffee, transparent 50%);
+  animation: sparkleMove 15s linear infinite;
+  filter: drop-shadow(0 0 2px #fff);
+}
+
+@keyframes sparkleMove {
+  0% {
+    background-position:
+      5% 15%,
+      10% 50%,
+      15% 80%,
+      25% 25%,
+      35% 45%,
+      40% 10%,
+      50% 70%,
+      60% 35%,
+      70% 20%,
+      75% 55%,
+      85% 40%,
+      90% 75%;
+  }
+  50% {
+    background-position:
+      6% 17%,
+      9% 48%,
+      17% 78%,
+      27% 27%,
+      33% 43%,
+      42% 12%,
+      48% 72%,
+      58% 38%,
+      68% 22%,
+      77% 57%,
+      83% 42%,
+      92% 77%;
+  }
+  100% {
+    background-position:
+      5% 15%,
+      10% 50%,
+      15% 80%,
+      25% 25%,
+      35% 45%,
+      40% 10%,
+      50% 70%,
+      60% 35%,
+      70% 20%,
+      75% 55%,
+      85% 40%,
+      90% 75%;
+  }
+}
+
+/* NAVBAR */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 18px 40px;
+  background: rgba(30, 0, 62, 0.85);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+}
+
+.logo {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #ffffff;
+}
+
+.nav-links {
+  display: flex;
+  gap: 25px;
+  list-style: none;
+}
+
+.nav-links a {
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+.nav-links a:hover {
+  color: #74f9ff;
+}
+
+.burger {
+  display: none;
+  font-size: 2rem;
+  cursor: pointer;
+  color: #fff;
+}
+
+/* HERO SECTION */
+.hero-section {
+  padding: 120px 20px 80px;
+  background: rgba(255, 255, 255, 0.05);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+h1 {
+  font-size: 3rem;
+  margin-bottom: 10px;
+}
+
+h2 {
+  font-size: 2rem;
+  margin-top: 60px;
+  margin-bottom: 20px;
+}
+
+p {
+  font-size: 1.1rem;
+  max-width: 600px;
+  margin: auto;
+  color: #eeeeee;
+}
+
+/* BUTTON */
+.btn {
+  display: inline-block;
+  margin-top: 25px;
+  padding: 12px 30px;
+  background: #ff5f6d;
+  color: white;
+  text-decoration: none;
+  border: none;
+  border-radius: 30px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+  background: #ffc371;
+  color: #000;
+}
+
+/* PROJECT CARD */
+.project-card {
+  perspective: 1000px;
+  display: block;
+  margin: 20px auto;
+  width: 80%;
+  max-width: 400px;
+  text-decoration: none;
+}
+
+.card-inner {
+  position: relative;
+  width: 100%;
+  padding: 30px 25px;
+  background: linear-gradient(145deg, #1f1b3a, #2a235d);
+  border-radius: 16px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+  color: white;
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+}
+
+.project-card:hover .card-inner {
+  transform: rotateY(180deg);
+}
+
+/* Front and Back side styling */
+.card-front, .card-back {
+  position: sticky;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  border-radius: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+/* Front side */
+.card-front {
+  font-size: 1.5rem;
+  color: #fbc2eb;
+}
+
+/* Back side */
+.card-back {
+  background: linear-gradient(135deg, #6a3093, #a044ff);
+  color: #fff;
+  transform: rotateY(180deg);
+  font-size: 1rem;
+  line-height: 1.4;
+  text-align: center;
+}
+
+/* CONTACT INFO */
+.contact-info p {
+  font-size: 1.1rem;
+  margin: 10px 0;
+}
+
+.contact-info a {
+  color: #74f9ff;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.contact-info a:hover {
+  color: #ffc371;
+  text-decoration: underline;
+}
+
+/* TYPING EFFECT */
+.typewriter {
+  overflow: hidden;
+  border-right: .15em solid #fff;
+  white-space: nowrap;
+  margin: 0 auto;
+  letter-spacing: .15em;
+  animation: typing 3s steps(30, end), blink-caret .75s step-end infinite;
+}
+
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+}
+
+@keyframes blink-caret {
+  from, to { border-color: transparent }
+  50% { border-color: white }
+}
+
+/* FADE-IN ANIMATIONS */
+.fade-in {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 1s ease forwards;
+}
+
+.delay-1 {
+  animation-delay: 0.3s;
+}
+
+.delay-2 {
+  animation-delay: 0.6s;
+}
+
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* RESPONSIVE NAVIGATION */
+@media (max-width: 768px) {
+  .nav-links {
+    flex-direction: column;
+    background: #2a0057;
+    position: absolute;
+    top: 60px;
+    right: 0;
+    width: 200px;
+    display: none;
+    padding: 20px;
+    border-radius: 0 0 0 12px;
+    box-shadow: -5px 5px 15px rgba(0, 0, 0, 0.3);
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+
+  .burger {
+    display: block;
+  }
+}
